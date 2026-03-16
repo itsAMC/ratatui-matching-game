@@ -68,8 +68,12 @@ impl App {
 
 impl Widget for &App {
     fn render(self, area: Rect, buf: &mut Buffer) {
-        let title = Line::from("Matching Game".bold());
+        let title = Line::from(" Counter App Tutorial ".bold());
         let instructions = Line::from(vec![
+            " Decrement ".into(),
+            "<Left>".blue().bold(),
+            " Increment ".into(),
+            "<Right>".blue().bold(),
             " Quit ".into(),
             "<Q> ".blue().bold(),
         ]);
@@ -79,7 +83,7 @@ impl Widget for &App {
             .border_set(border::THICK);
 
 
-        Paragraph::new("")
+        Paragraph::new(Line::from("Matching Game").blue().bold())
             .centered()
             .block(block)
             .render(area, buf);
