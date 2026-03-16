@@ -4,5 +4,5 @@ fn main() {
 
 
 fn test_git() -> i32 {
-    5
+    6
 }
